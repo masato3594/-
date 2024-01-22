@@ -1,0 +1,119 @@
+@charset "utf-8";
+
+/* ポートフォーリオ制作案
+●入れたい要素
+・トップページにローディング画面(Js)
+・大きな画像挿入
+⇒三国志の名所を散りばめて自己紹介
+⇒背景画像は朝と夜で変わるギミックを実装予定
+・履歴書チックなプロフ
+・ファビコンの設定
+●必須項目
+①目次
+②自己紹介（プロフィール）
+名前
+生年月日
+連絡先:もう一つmaiを作るl
+過去経歴
+スキルセット
+資格・使用可能ツール
+自身の強みと具体的なエピソード（自己PR）
+③作品紹介
+・web制作作品
+使用言語
+作成期間
+工夫点
+制作ストーリー
+GitHub(ソースコード)
+閲覧期限2024/7/15迄
+・オリジナルサイト(阿部寛のサイトみたいなやつ)を掲載
+ */
+
+
+/* デザイン崩れの防止 */
+*{
+    box-sizing:border-box;
+    margin: 0 auto;
+    width:100%;
+}
+/* ヘッダーエリア */
+header nav{
+    background-color:#000;
+    position:fixed;
+    height:50px;
+    width:100%;
+}
+.navIcon{
+    width:45px;
+    height:45px;
+    z-index:10;
+}
+.fireIcon{
+    width:50px;
+    height:50px;
+    position:relative;
+    top:0;
+    left: 195px;
+    z-index:-1;
+}
+nav ul{
+    height:50px;
+    width:100%;
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+}
+nav li{
+    font-size:26px;
+    color:red;
+    text-align:center;
+}
+nav span{
+    font-size:20px;
+}
+.heroImg{
+    padding-top:50px;
+    height:100vh;
+}
+/* メインエリア全体 */
+main{
+    background-color:rgb(192, 192, 192);
+}
+/* プロフィールエリア */
+.profileImg{
+    display:block;
+    width:150px;
+}
+
+/* ウェブサイトエリア */
+.innerRap div{
+    margin-left:10px;
+    margin-right:10px;
+    display:flex;
+    flex-wrap:wrap;
+    width:48%;
+}
+.innerRap img{
+    width:150px;
+}
+/* コンタクトエリア */
+
+/* フッターエリア */
+footer{
+    background-color:#000;
+}
+footer > p{
+    text-align:center;
+    color:#fff;
+}
+
+/* レスポンシブウェブデザイン:スマホ⇒PC 600px　　　*/
+@media (min-width: 600px) {
+    .heroImg{
+        max-width: 100%;
+        object-position: 50% 50%;
+    }
+
+
+
+}
