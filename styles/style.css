@@ -1,0 +1,1145 @@
+*{box-sizing:border-box;}
+
+/*仕様書指定設定  */
+body{
+    font-family:'Noto Sans JP';
+    max-width:1366px;
+    width:100%;
+    font-size:16px;
+    line-height:1.8;
+    /* padding:4の倍数 */
+}
+h1{font-size:32px;}
+
+/* 共通パーツ　ヘッダー */
+header{
+    width:100%;
+    /* position:fixed;
+    z-index:999; */
+}
+/* JSで元画像サイズの一括指定できるかも？ */
+header img {
+    display:block;
+}
+.header-top{
+    background-color:#ede0d4;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:relative;
+    height:120px;
+}
+.header-top .container {
+    position:absolute;
+    left:45%;
+}
+.drawer-btn {
+    margin-left:10%;  
+}
+.main-logo{
+    padding:20px 0;
+}
+.login-brn{
+    margin-left:65%;
+}
+.cart-btn {
+    margin-right:8%;
+}
+
+.header-bottom{
+    background-color:#b392ac;
+    height:50px;
+}
+.header-bottom .container{
+    height:100%;
+    display:flex;
+    justify-content:flex-end;
+    align-items:center;
+}
+.search-icon{
+    background-color:#ccc;
+    border: 2px solid #7f5539;
+    margin-left: 100px;
+    margin-right:0 ;
+    height:30px;
+}
+.search-window {
+    height:30px;
+    width:20%;
+    display:block;
+    border: 2px solid #7f5539;
+    background-color:#fff;
+    margin-right: 100px;
+}
+/* 共通パーツ　footer */
+footer{
+    background-color:#ede0d4;
+}
+.footer-nav{
+    display:flex;
+    padding:8vh;
+    margin-left:10%;
+    margin-bottom:10vh;
+}
+.footer-nav li {
+    font-size: 16px;
+    height:8vh;
+    padding-top:10px;
+    padding-left:8px;
+    margin-right:10px;
+    border-left: 1px solid #b392ac;;
+}
+footer li,
+footer p {
+    color:#7f5539;
+}
+.footer-logos {
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+.footer-logo {
+    width:145px;
+    height:130px;
+    margin: 0 auto;
+}
+.sns-logos{
+    display:flex;
+    justify-content:space-between;
+    margin: 40px auto;
+    width:200px;/* 仮 */
+}
+.footer-border{
+    border: 1px solid #7f5539;
+}
+.footer-text{
+    text-align:center;
+}
+/* 共通パーツ　ドロワー */
+.drawer-images {
+    display:flex;
+    justify-content:flex-end;
+}
+.drawer-images img{
+    display:block;
+}
+.drawer-rogo {
+    width:90px;
+    height:80px;
+}
+.drawer-buttom {
+    width:54px;
+    height:54px;
+}
+.nav-menu {
+    position:relative;
+}
+.drawer-rogo {
+    position:absolute;
+    top:20px;
+    left:20px;
+}
+.nav-menu {
+    width:35%;
+    height:75vh;
+    background-color: rgba(127, 85, 57, 0.75);
+}
+.nav-container {
+    margin: 15vh 5vw 20vh 5vw;
+}
+.nav-container li{
+    font-size:1rem;
+    border-bottom: 1px solid #fff;
+    padding-bottom:8px;
+    margin-bottom: 8px;
+}
+.nav-container a {
+    color:#fff;
+    text-decoration: none;
+}
+.nav-container li a:hover {
+    color:#b392ac;
+}
+#nav {
+    z-index:999;
+    display: none;
+    position: absolute;
+    top: 0;
+    left:0;
+    transition: transform 0.2s ease;
+    transform: translateX(100%);
+}
+#nav.show {
+    display:block;
+    transform: translateX(0);
+    transition: transform 0.2s;
+}
+
+/* ///////////// 共通設定 margin //////////////// */
+.notice-contants,
+.ranking-content,
+.cart-product,
+.margin-container,
+.member-registration-content,
+.input-confirmation-contants,
+.membership-registration,
+.caution-container,
+.credit-registration,
+.credit-entry-information,
+.registration-completed,
+.purchase-affirmation,
+.input-confirmation-contents,
+.logout-contents  {
+    margin: 5vh 10vw;
+    
+}
+/* ////////////トップページ///////////////// */
+/*    ↓ main contents　↓ 　*/
+/* エリアの境目のmargin設定 */
+
+/* 　　　お知らせコンテンツ　　 */
+.user-name {
+    margin: 1vh auto 1vh 10vw ;
+    font-size:1.5rem;
+    color: #7f5539;
+}
+.pc-heroimg {
+    /* 一括指定後でやってみる　background */
+    display:block;
+    width:100%;
+    height: 600px;
+    background-image: url(../images/pc-hero.png);
+    background-repeat: no-repeat;
+}
+.notice-dounts{
+    display:flex;
+    justify-content:space-between;
+    margin-bottom:5vh;
+}
+.position {
+    position:relative;
+}
+.notice-dounts p{
+    white-space: nowrap;
+    font-size: 1.5rem;
+    color:#fff;
+    /* font-family:; */
+}
+.new-icon {
+    position:absolute;
+    right:370px;
+}
+.summer-citrus {
+    position:absolute;
+    top:430px;
+    right:50px;
+    font-weight:bold;
+}
+.dounts-life {
+    position:absolute;
+    top:400px;
+    right:120px;
+    font-weight:bold;
+}
+.dounts-banner {
+    color:#7f5539;
+    font-size: 1.5rem;
+    position:absolute;
+    top:220px;
+    left:930px;
+    white-space: nowrap;
+}
+.notice-contants .dounts-life-img {
+    margin-left:80px;
+}
+/* ///////////////トップページ///////////////////// */
+/* 　　　お店の紹介コンテンツ　　 */
+/* cssで:hoverでopacity1⇒0.8設定したい */
+.philosophy-img{
+    display:block;
+    object-fit:cover;
+    width:100%;
+    height:auto;
+}
+.hedding-introduction{
+    font-size:3rem;
+    font-weight: bold;
+    color:#fff;
+    position:absolute;
+    top:30vh;
+    left:40vw;
+}
+.introduction-text {
+    font-size:1.5rem;
+    color:#fff;
+    margin-top:3vh;
+    margin-bottom:3vh;
+    text-align:center;
+    position:absolute;
+    top:40vh;
+    left:40vw;
+}
+/*       人気ランキング　コンテンツ*/
+/* 見出しの下に罫線を陰を加える仕掛け */
+.ranking-content h2 {
+    font-size:2rem;
+    width:27%;
+    border-bottom: 2px solid #ffd233;
+    text-align: center;
+    margin: 10vh auto 20vh auto;
+}
+/* 後で見出しに影を追加、うまく実装出来ない */
+/* .ranking-content h2::after {
+    content:'';
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: -4px; 
+    width: 100%;
+    height: 8px; 
+    background-color: #000; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+} */
+.grid-container {
+    display:grid;
+    gap:20px;
+    /* 可変幅に対応させる為に後で画像サイズベースで列を調整するのを追記 */
+    grid-template-columns: repeat(3,1fr);
+    /* grid-auto-columns: minmax(auto, 200px); */
+    margin-bottom:10vh;
+}
+.grid-items {
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom:10vh;
+}
+.grid-items img {
+    display: block;
+    align-self:center;
+}
+.grid-container input {
+    margin-left:0 !important;
+}
+.dounts-img {
+    width:320px;
+    height:320px;
+}
+.rank-logo {
+    width:60px;
+    height:60px;
+    margin-bottom: 5vh;
+}
+.product-name {
+    color:#7f5539;
+    font-weight: bold;
+    font-size:1.25rem;
+}
+.product-price {
+    color:#bf0000;
+    font-size:1.25rem;
+}
+.add-product{
+    align-self:center;
+    opacity:0.8;
+}
+.add-product input[type="submit"] {
+    padding: 4vh 4vw;
+    font-size:1.5rem;
+    border-radius: 10px;
+    width:100%;
+    color: #fff;
+    background-color:#7f5539;
+    text-decoration: none;
+    box-shadow: 0 7px rgba(0, 0, 0, 0.2);
+}
+.add-product input[type="submit"]:hover {
+    opacity:0.8;
+}
+.add-product input[type="submit"]:active {
+    position: relative;
+    top: 5px;
+    box-shadow: none;
+} 
+.product-name,
+.product-price {
+    padding-left:2vw;
+    margin-bottom:3vh;
+}
+
+/* ///////////////商品一覧ページ///////////////////// */
+/* 　　　top固定領域　　　 */
+/* flexで縦並び、use-nameの複数ページにphpを充てるやり方？ */
+.product-breadcrumb li{
+    border-bottom: 1px solid #7f5539;
+}
+/*  　　 商品一覧コンテンツ　同じクラスで使いまわし*/
+/* 　メインメニュー＆バラエティセット 　　*/
+.hedding-text {
+    text-align:center;
+    color:#7f5539;
+    margin:20vh auto;
+}
+.product-summercitrus {
+    width: 320px;
+    height:320px;
+}
+.product-name {
+    color:#7f5539;
+    font-weight: bold;
+    font-size:1.25rem;
+}
+.product-price {
+    color:#bf0000;
+    font-size:1.25rem;
+}
+.text-span{
+    margin-left:3vw;
+}
+.product-variety .grid-items {
+    .product-name,.product-price {
+        padding-left: 4vw;
+    }
+}
+/* ---           PC商品詳細ページ              --- */
+.product-contents {
+    margin:10vh 10vw;
+    display:flex;
+    justify-content:space-evenly;
+}
+.dounts-choise {
+    display:block;
+}
+.product-textarea {
+    width:40%;
+}
+.product-description {
+    border-top: 1px solid rgba(127, 85, 57, 0.5);
+    border-bottom: 1px solid rgba(127, 85, 57, 0.5);
+    padding-top: 4vh;
+    padding-bottom: 4vh;
+    font-size: 1.5rem;
+    color:#7f5539;
+    text-align: left;
+}
+.quantity-favorite {
+    display:flex;
+    justify-content:space-between;
+    align-items:end;
+}
+.quantity {
+    margin-left:1vw;
+    margin-right:1vw;
+    width:80px;
+    height:52px;
+    font-size: 2rem;
+    text-align:center;
+    
+}
+.indivual {
+    align-self: flex-end;
+    margin-right:1.5vw;
+}
+.favorite {
+        margin-left: 1vw;
+}
+.fa-regular {
+    font-size:40px;
+}
+/* ---          PC商品詳細ページ               --- */
+.container-contents {
+    padding: 4vh 4vw 4vw 0;
+}
+/* ---          PCカートページ                  ---*/
+.cart-top {
+    border: 2px solid #ffd233;
+    width:100%;
+    height:280px;
+    text-align: center;
+}
+.selected-product {
+    display:flex;
+    margin: 10vh auto;
+}
+.selected-donuts {
+    display:block;
+    height:320px;
+}
+.selected-introduction {
+    width:100%;
+    height:320px;
+    margin-left:2vw;
+}
+.product-adjustment {
+    height:auto;
+    display:flex;
+    justify-content:space-between;
+    border-top: 1px solid rgba(127, 85, 57, 0.5);
+    border-bottom: 1px solid rgba(127, 85, 57, 0.5);
+    font-size: 1.5rem;
+    color:#7f5539;
+    text-align: left;
+}
+.calculate-again p {
+    margin-top: 2vh;
+    text-align:center;
+}
+.calculate-again-btn{
+    font-size:1.25rem;
+    width:150px;
+    padding: 2vh 2vw;
+    text-align:center;
+    margin-top:5vh;
+    color:#fff;
+    text-decoration: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius:10px; 
+    opacity:0.8;
+    box-shadow: 0 5px rgba(0, 0, 0, 0.2);
+    display:inline-block;
+}
+.delete-items {
+    display:block;
+    padding-top:11vh;
+}
+.cart-top p,
+.cart-bottom p {
+    text-align:center;
+    font-size: 1.5rem;
+}
+.cart-top p:first-child {
+  padding-top: 6vh;
+}
+.total-order,
+.total-price {
+    display:inline-block;
+    color:#bf0000;
+    font-size: 1.75rem;
+}
+.purchase-confirmation{
+    background-color:#bf0000;
+    font-size:1.5rem;
+    color:#fff;
+    padding: 2vh 2vw;
+    opacity:0.8;
+    border-radius:10px;
+    box-shadow: 0 7px rgba(0, 0, 0, 0.2);
+    display:inline-block;
+    margin-top:6vh;
+    text-decoration: none;
+}
+.purchase-confirmation:active {
+    position: relative;
+    top: 7px;
+    box-shadow: none;
+}
+/* ---          ログインページ                 --- */
+.hedding-login {
+    font-size:2rem;
+    border-bottom: 2px solid #ffd233;
+    width: 200px;
+    white-space: nowrap;
+    text-align: center;
+    margin: 10vh auto 20vh auto;
+}
+.login-contents .margin-container {
+    padding:4%;
+}
+.margin-container {
+    border: 2px solid #f7d1cd;
+}
+.login-contents label {
+    font-size:1rem;
+}
+.login-contents input[type="email"],
+.login-contents input[type="password"] {
+    width:100%;
+}
+.login-contents .login-btn {
+    margin-top:5vh;
+    margin-bottom:5vh;
+}
+
+label {
+    display:block;
+    color:#7f5539;
+    margin-top: 5vh;
+    padding-left:2vw;
+}
+.login-form div,
+.login-form p {
+    font-size: 1.25rem;
+}
+.member-registration-content .login-form input:not([type="submit"]) {
+    border: 1.5px solid #7f5539;
+    display:block;
+    width:100%;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    padding: 8px;
+}
+input[type="submit"] {
+    font-size:1.25rem;
+    background-color: #7f5539;
+    width:35%;
+    margin-left:32%;
+    margin-bottom:10vh;
+    color: #fff;
+    border: none;
+    padding: 4vh 4vw;
+    cursor: pointer;
+    border-radius:10px;
+    box-shadow: 0 7px rgba(0, 0, 0, 0.2);
+}
+input[type="submit"]:hover {
+    background-color: #A0522D; /* ホバー時の背景色 */
+}
+input[type="submit"]:active {
+    position: relative;
+    top: 5px;
+    box-shadow: none;
+}
+.member-text {
+    display:block;
+    text-align:right;
+    text-decoration: none;
+    color:#7f5539;
+    margin-right:10vw;
+    margin-bottom:5vh;
+}
+.member-text:hover {
+    text-decoration: underline;
+}
+/* ---          ログイン完了ページ               --- */
+.login-text {
+    text-align:center;
+    font-size:2rem;
+    color:#7f5539;
+    padding:10vh;
+}
+/* ---            会員登録ページ               --- */
+.submit {
+    margin-left:35%;
+}
+
+.cautionary-text small {
+    color:#bf0000;
+    padding-left: 2vw;
+}
+.post-input {
+    display:flex;
+    width:40%;
+}
+.post-code1 {
+    width:30% !important;
+    margin-right:20px;
+}
+.post-haifun {
+    align-self:center;
+    font-weight: bold;
+    margin-right:20px;
+}
+.post-code2 {
+    width:35% !important;
+}
+/* ---       会員登録入力確認ページ            --- */
+
+/* ---          会員登録完了ページ             --- */
+.membership-hedding .hedding-login {
+    width:200px;
+}
+.membership-registration p{
+    font-size:2rem;
+    color:#7f5539;
+    padding:10vh;
+    text-align:center;
+}
+/* .input-confirmation-contents .submit {
+    margin-left:32%;
+} */
+/* ---   クレジットカード情報入力ページ        --- */
+.credit-registration label {
+    font-size: 1.5rem;
+}
+.credit-registration input[type="text"] {
+    width:100%;
+}
+.caution-container {
+    border: 2px solid #bf0000;
+    padding: 10vh;
+}
+.caution-container p {
+    text-align:center;
+    font-size: 3rem;
+    color:#bf0000;
+}
+.card-years {
+    display:flex;
+}
+.expiry-month {
+    margin-top:5vh;
+    margin-bottom: 5vh;
+    width:30% !important;
+}
+.expiry-year {
+    width:30% !important;
+}
+.card-years p,
+.expiry-month p {
+    align-self:center;
+}
+/* 後で調整 */
+.card-company-label {
+    display:flex;
+    margin-right:4px;
+}
+.credit-registration .submit {
+    margin-top:5vh;
+}
+/* ---   クレジットカード情報入力確認ページ    --- */
+.credit-entry-information > form > div{
+    display:block;
+    width:100%;
+}
+
+/* ---   クレジットカード情報登録完了ページ  ---*/
+.registration-completed .margin-container {
+    font-size:2rem;
+    color:#7f5539;
+    text-align:center;
+    padding:10vh;
+}
+/* ---     購入確認（支払い方法＆最終確認）ページ     --- */
+.addressee-hedding {
+    text-align:center;
+    font-size:1.25rem;
+    color:#b392ac;
+    margin: 6vh auto;
+}
+.addressee-hedding2 {
+    text-align:center;
+    font-size:1.25rem;
+    color:#b392ac;
+    margin: 6vh auto;
+    padding-bottom:6vh;
+    border-bottom: 1.5px solid #b392ac;
+}
+.product-total {
+    border-top: 1.5px solid #b392ac;
+    border-bottom: 1.5px solid #b392ac;
+    padding-top:4vh;
+    padding-bottom:4vh;
+    margin: 6vh auto;
+}
+.purchase-affirmation .product-total div {
+    display:flex;
+    font-size:1.5rem;
+    margin-bottom:8px;
+}
+.product-total p {
+    border-left: 2px solid #b392ac;
+    padding-left: 8px;
+}
+.form-text {
+    text-align: center;
+    color:#7f5539;
+    border-bottom:1.5px solid #b392ac;
+    margin: 6vh auto 12vh auto;
+}
+.product-total .login-form .submit {
+    width:38%;
+}
+.addressee-hedding2 .login-form .submit {
+    width:50% !important;
+}
+/* ---             購入完了ページ           ---*/
+/* .membership-hedding .hedding-login {
+    margin-right:auto;
+    margin-left:auto;
+} */
+/* ---             ログアウトページ           ---*/
+.logout-contents .margin-container {
+    padding:20vh ;
+    margin-top:10vh;
+}
+.logout-contents .margin-container p {
+    color:#b392ac;
+    font-size:3rem;
+}
+/* テストページ用 */
+.box-container {
+    position:relative;
+    display:flex;
+    justify-content:space-between;
+}
+.box-container p {border: 2px solid #b392ac;}
+.logo-test {
+    position:absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.box1 {
+    margin-left:10%;
+    font-size:64px;
+}
+.box3 {
+    margin-right:10%;
+    font-size:4rem;
+}
+
+/* メディアクエリ */
+/* calc85%指定する,やはりpx指定は… */
+@media (max-width: 768px){
+/* 　　　　　仕様書指定　　　　　 */
+    body{width:100%;}
+    h1{font-size:20px;}
+/*          別途指定　　　　　　  */
+    
+/* 　　　header　共通パーツ　　　 */
+    .header-top {
+        height:80px;
+    }
+    .dorwer-btn{
+        width:35px;
+        height:35px;
+    }
+    .main-logo {
+        width:75%;
+    }
+    .login-brn {
+        margin-left:40%;
+        width:40px;
+        height:40px;
+    }
+    .cart-btn {
+        margin-right:5%;
+        width: 40px;
+        height:40px;
+    }
+    .header-bottom{
+        background-color:#ede0d4;
+    }
+    .header-bottom .container {
+        justify-content: start;
+    }
+    .search-icon{
+        margin-left:18px;
+    }
+    .search-window{
+        margin-right:20px;
+        margin-left:0 ;
+        width:100%;
+    }
+/*         footer     共通パーツ　　 */
+    .footer-nav {
+        display:block;
+        padding: 20px 0 0 0;
+        margin-bottom:20px;
+    }
+    .footer-nav li {
+        height:3vh;
+        padding-top:0;
+        margin-bottom:10px;
+        border-left: 2px solid #b392ac;
+    }
+    /* orderで1と2を入れ替えて配置,revesでも可 */
+    .footer-logo {
+        order:2; /* pc版で順番を入れ替える仕掛け */
+        width:72px;
+        height:64px;
+        margin-right:20px;
+        margin-bottom:10px;
+    }
+    .sns-logos {
+        order:1; /* pc版で順番を入れ替える仕掛け */
+        margin-left:30px;
+        width:40%;
+        height:50%;
+        margin-top:5px;
+    }
+/*         　　　　　ドロワー機能　　　　　　　　　　　　　　 */
+#nav {
+    width:65vw;
+}
+.nav-container {
+    margin: 15vh 0;
+}
+.nav-container a{
+    padding-left:16px;
+}
+/* ///////////// コンテンツ共通設定 margin //////////////// */
+    .notice-contants,
+    .ranking-content,
+    .member-registration-content,
+    .input-confirmation-contants,
+    .membership-registration,
+    .caution-container,
+    .credit-registration,
+    .credit-entry-information,
+    .registration-completed,
+    .purchase-affirmation,
+    .input-confirmation-contents,
+    .logout-contents {
+        margin: 2vh 4vw;
+    }
+
+
+/* ///////////////トップページ///////////////////// */
+        /*       main contents       */
+    .user-name {
+        font-size:1rem;
+    }
+    .sp-heroimg {
+    display:block;
+    width:100%;
+    height: 200px;
+    background-image: url(../images/sp-hero.png);
+    background-repeat: no-repeat;
+    }
+
+        /* 　　　　お知らせコンテンツ */
+    .new-icon {
+        width:50px;
+        height:50px;
+        top:5px;
+        right:110px;
+    }
+    .summer-citrus-img,
+    .dounts-life-img {
+        width:160px;
+        height:160px;
+    }
+    .dounts-life-img {
+        margin-left:15px;
+    }
+    .summer-citrus {
+        font-size:0.75rem !important;
+        top:140px;
+        right:10px;
+    }
+    .dounts-life{
+        font-size:0.75rem !important;
+        top:120px;
+        right:30px;
+    }
+    .banner-img {
+        display:block;
+        width: 100%;
+        height:auto;
+    }
+    .dounts-banner{
+        font-size:1rem;
+        top:60px;
+        left:260px;
+    }
+/* 　　　　お店の紹介コンテンツ */
+    .hedding-introduction {
+        font-size:20px;
+        top:5vh;
+        left:141px;
+    }
+    .introduction-text {
+        font-size: 1rem;
+        top:50px;
+        left: 110px !important;
+    }
+
+/* 　　　　人気ランキングコンテンツ */
+    .header-ranking h2 {
+        font-size:1.5rem;
+        width:50vw;
+        margin: 5vh auto;
+    }
+    .grid-container {
+        grid-template-columns: repeat(2,1fr);
+    } 
+    .rank-logo {
+        width:40px;
+        height:40px;
+        margin-bottom:5vh;
+    }
+    .dounts-img {
+        width: 160px;
+        height:160px;
+    }
+    .add-product input[type="submit"] {
+        padding: 1vh 2vw;
+        font-size:1rem;
+        border-radius: 10px;
+    }
+    .grid-container  {
+        gap:10px;
+    }
+
+/* ///////////////商品一覧ページ///////////////////// */
+/* 　　　top固定領域　　　 */
+.product-breadcrumb li:first-child {
+    font-size: 0.75rem; /* 任意のフォントサイズに変更 */
+  }
+/*  　　 商品一覧コンテンツ　*/
+.ranking-content h2 {
+    font-size:1.5rem;
+    width:50vw;
+    margin: 5vh auto;
+}
+/* 　　　メインメニュー＆バラエティセット 　　*/
+.hedding-text {
+    margin: 10vh auto;
+}
+/* ---          sp商品詳細ページ               --- */
+.product-contents {
+    margin:2vh 4vw;
+    display:block;
+}
+.dounts-choice {
+    width:100%;
+    height:auto;
+}
+.product-textarea {
+    width:100%;
+}
+.product-name {
+    font-size:1em;
+}
+.product-description {
+    font-size: 0.75rem;
+    margin:1vh auto;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+}
+.quantity {
+    /* width:56px;
+    height:36px; */
+    font-size: 2rem;
+    text-align:center;
+}
+.indivual {
+    margin-right:3vw;
+}
+.favorite {
+    margin-left: 2vw;
+}
+/* ---          spカートページ                  ---*/
+.cart-top {
+    height:300px;
+}
+.selected-product,
+.product-adjustment {
+    display: block;
+}
+.cart-product {
+    margin: 2vh 4vw;
+}
+.container-contents {
+    padding-right:0;
+}
+.purchase-confirmation {
+    font-size:1rem;
+    margin-top:2vh;
+}
+.selected-product img{
+    margin-left:0;
+    width:100%;
+}
+.delete-items{
+    padding-top:0;
+    margin:5vh;
+}
+.cart-top p::nth-child(2) {
+    padding-left:2vw;
+  }
+/* ---          ログインページ                 --- */
+.hedding-login {
+    font-size: 1.5rem;
+    width: auto;
+    white-space: nowrap;
+    margin: 5vh auto;
+}
+.login-form label {
+    margin-top:0vh;
+}
+.login-form {
+    padding:16px;
+}
+
+input[type="submit"] {
+    font-size:1rem;
+    padding: 1vh 2vw;
+    width:50%;
+    margin-left:25%;
+}
+
+/* ---          ログイン完了ページ               --- */
+.login-text {
+    font-size:1.25rem;
+    padding:4vh;
+}
+/* ---            会員登録ページ               --- */
+.login-text {
+    font-size: 1rem;
+    padding: 2vh;
+}
+.member-text {
+    margin-bottom: 2vh;
+}
+.submit {
+    margin-left:50%;
+}
+/* ---       会員登録入力確認ページ            --- */
+.submit {
+    margin-left:24%;
+}
+/* ---          会員登録完了ページ             --- */
+.membership-registration p {
+    font-size:1rem;
+    padding:2vh; 
+}
+/* ---   クレジットカード情報入力ページ        --- */
+/* .credit-registration .login-form {
+
+} */
+.caution-container {
+    padding:12px;
+}
+.caution-container p {
+    font-size: 1.5rem;
+}
+.purchase-affirmation p {
+font-size: 1.25rem;
+}
+.credit-registration label {
+    font-size:1.25rem;
+}
+.login-form span {
+    color:#bf0000;
+}
+/* .card-years {
+    display:flex;
+} */
+/* ---   クレジットカード情報入力確認ページ    --- */
+.credit-entry-information {
+    width:100%;
+}
+/* ---   クレジットカード情報登録完了ページ  ---*/
+.registration-completed .margin-container {
+    font-size:1rem;
+    padding:2vh;
+}
+/* ---     購入確認（支払い方法＆最終確認）ページ     --- */
+.purchase-affirmation .submit {
+    margin-left:25%;
+}
+.purchase-affirmation .product-total div {
+    font-size:1.25rem;
+}
+
+/* ---             購入完了ページ           ---*/
+.membership-registration .margin-container {
+    font-size:1rem;
+    padding:2vh;
+}
+/* ---             ログアウトページ           ---*/
+
+
+
+}
