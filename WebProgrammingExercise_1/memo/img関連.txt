@@ -1,0 +1,30 @@
+★img関連のメモ
+
+
+◆HTMLに直接サイズ指定
+
+<img src="画像パス" width="200" height="100">
+※単位はpx
+
+◆backgroundプロパティで一括指定⇒一括指定できない時があるが原因不明…
+例)
+background: #333 url(画像パス) no-repeat left center / cover;
+	     color      画像          repeat      position      size
+     
+●指定できる値
+
+●background-position⇒画像のトリミング位置の設定
+
+例)
+background-position:left center;⇒横、縦の位置をトリミング指定できる
+・%指定パターン　　　　:10% 50%; ⇒左から10%,うえから50%(center) 
+・px指定パターン         :right 100px bottom 20px; 右から100px,下から20px(2方向で指定)
+
+●background-size⇒画像の大きさを指定(アスペクト比が崩れると画像が歪む)
+
+例)
+background-size: 100% auto;⇒基本指定,アスペクト比を維持して横幅に合わせる
+・高さに合わせるパターン　:auto 100%; アスペクト比を維持して画面の高さに合わせる
+・px指定パターン  :100px 50px;⇒横100px,横50px指定
+・要素いっぱいに表示 :cover;　 ⇒アスペクト比は維持される
+・画像全てを表示      :contain;⇒アスペクト比は維持される

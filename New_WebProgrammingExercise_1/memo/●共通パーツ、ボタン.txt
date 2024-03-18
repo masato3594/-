@@ -1,0 +1,49 @@
+●共通パーツ、ボタン
+
+・パターンマッチングで部分一致するクラスを
+纏めて指定。
+[class^="form-"] {
+    display:flex;
+    margin-top:3%;
+    margin-bottom:3%;
+    height:52px;
+}
+
+
+.add-product input[type="submit"]:active {
+    position: relative;
+    top: 5px;
+    box-shadow: none;
+} 
+・大きいサイズ
+.add-product input[type="submit"] {
+    /* ここの調整から */
+    padding: 4vh 4vw;
+    font-size:1.5rem;
+    border-radius: 10px;
+    width:100%;
+    color: #fff;
+    background-color:#7f5539;
+    text-decoration: none;
+    box-shadow: 0 7px rgba(0, 0, 0, 0.2);
+}
+
+・小さいボタン
+.purchase-confirmation{
+    background-color:#bf0000;
+    font-size:1.5rem;
+    color:#fff;
+    padding: 2vh 2vw;
+    opacity:0.8;
+    border-radius:10px;
+    box-shadow: 0 7px rgba(0, 0, 0, 0.2);
+    display:inline-block;
+    margin-top:6vh;
+    text-decoration: none;
+}
+
+sp
+ .add-product input[type="submit"] {
+        padding: 1vh 2vw;
+        font-size:1rem;
+    }

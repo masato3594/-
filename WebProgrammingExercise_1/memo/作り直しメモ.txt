@@ -1,0 +1,8 @@
+★演習１　　作り直しフロー
+
+先に共通パーツを作りひな形を作成
+
+・top.html,newstyle.css.Eric_resetで作成。
+
+
+

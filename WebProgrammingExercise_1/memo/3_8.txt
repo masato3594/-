@@ -1,0 +1,37 @@
+・本日のタスク
+
+画像のトリミング
+・background-position:横の位置　縦の位置;
+例)
+
+left center
+10% 50%; 左から10% 上から50%
+right 100px bottom 20px; 右から100px 下から20px(に方向で指定)
+
+スクロールスナップ
+sectionにscroll-snap-type: y　mandatory(次のエリアに吸い付くように移動);を指定
+
+/* スナップを無効にする */
+scroll-snap-align: none;
+
+/* 要素の開始部分がスナップポイントになる */
+scroll-snap-align: start;
+
+/* 要素の終了部分がスナップポイントになる */
+scroll-snap-align: end;
+
+/* 要素の中央がスナップポイントになる */
+scroll-snap-align: center;
+
+
+<section class="concept-contants section-container" id="concept_area">
+            <div class="hedding-area">
+                <h1>CONCEPT</h1>
+                <p class="sub-hedding">コンセプト</p>
+            </div>
+            <h2>家族が笑顔になれる場所</h2>
+            <p class="concept-text">家族が集う、温かく居心地の良い空間づくりを目指して、幅広い年代の方に安心して過ごしていただける空間づくりや、
+                お手入れのしやすい素材を使用したリフォームをご提案いたします。</p>
+        </section>
+
+このセクションに対してscroll-snap-type:y;を指定して親要素の中間地点で停止かつ、次のセクションでmandatory(次のエリアに吸い付くように移動);を指定。

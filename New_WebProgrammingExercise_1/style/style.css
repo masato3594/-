@@ -1,0 +1,595 @@
+/* ★仕様書指定項目
+==================================== */
+body {
+width:1366px;
+max-width:100%;
+}
+h1 {
+    font-size:2.625rem;
+    letter-spacing: 6px;
+    font-weight: bold;
+    text-align:center;
+    font-family: "sans-serif jp";
+    margin-bottom:24px;
+}
+.sub-hedding {
+    font-size:1rem;
+    font-family: "Noto Sans JP";
+}
+.noto-sans  {
+  font-family: "Noto Sans JP", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}
+/* ★仕様書指定
+カラー指定
+#b71b26(赤)
+#223e69(青)
+#fff(白)
+#333(黒) */
+
+/* ★リンクのマウスホバーの設定の挿入(:hover)
+★フォームエリアのフォーカス時の設定の挿入(:hover) */
+ /* ★ファビコン探す  */
+
+/*  ★共通項目、モジュール設定
+   ==================================== */
+*{box-sizing: border-box;}
+/* コンテンツマージン */
+.section-container {
+    margin: 15% 12.5%;
+}
+.section-container .section-container {
+    padding: 11% 12.5%;
+}
+/* 見出しとサブタイトルの調整の仕掛け */
+.hedding-area {
+    margin-bottom:48px;
+}
+.sub-hedding {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+/* サブタイトルに罫線を引く仕掛け */
+.sub-hedding::before,
+.sub-hedding::after {
+    display:inline-block;
+    content: '';
+    width: 80px;
+    height: 2px;
+    background-color: #333;
+    margin: 0 12px;
+}
+/* img {display:block;} */
+/* セクションの境目にスクロールスナップを挿入
+   ------------------------------------ */
+/*  後で調整
+ section {scroll-snap-type: y mandatory;}
+#concept_area {scroll-snap-align: end;}
+#service-area {}
+#flow-area {}
+#question-area {}
+#contact-area {} */
+
+
+/* セクション: header領域
+   ------------------------------------ */
+.logo-img {
+    width:80%;
+    height:60px;
+    margin-top: 6px;
+    margin-left: 33px;
+}
+header {
+    display:flex;
+    justify-content:space-between;
+}
+/* セクション: nav領域
+  ------------------------------------ */
+#menu_btn {display:none;}
+
+nav {
+    width:100%;
+}
+.menu-contents ul {
+    display:flex;
+    justify-content:space-evenly;
+    margin-top:27px;
+    margin-bottom:21px;
+}
+.menu-contents a {
+    text-decoration: none;
+    font-size:1rem;
+    color:#333;
+}
+/* セクション: hero画像
+　------------------------------------ */
+.pc-hero {
+    width:100%;
+    height:545px;
+    /* 後でbackground一括指定 */
+    background-image:url(../images/pc-hero.png);
+    object-fit:cover;
+    background-repeat: no-repeat;
+}
+
+/* セクション1: concept-contants
+　------------------------------------ */
+h2 {
+    font-size:1.75rem;
+    font-weight: bold;
+    text-align:center;
+}
+.concept-text {
+    margin-top:24px;
+}
+/* セクション2: service-contants
+　------------------------------------ */
+.service-list {
+    display:grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap:60px;
+}
+.grid-list img {
+    width:100%;
+    height:auto;
+    object-fit:cover;
+}
+h3 {
+    font-size:1.5rem;
+    font-family: "Noto Sans JP";
+    margin: 16px auto;
+    text-align:center;
+}
+.more-btn {
+    display:inline-block;
+    text-decoration: none;
+    color:#333;
+    padding-top:15%;
+    margin-left:80%;
+}
+.triangle-mini {
+    display:inline-block;
+    clip-path: polygon(0 0, 0 100%, 100% 50%);
+    background-color: #333;
+    height: 8px;
+    width: 8px;
+    margin-left:3px;
+}
+
+/* セクション3: flow-contants
+　------------------------------------ */
+.flow-contants .section-container {
+    padding-top: 9%;
+    padding-bottom: 9%;
+}
+.flow-contants .sub-hedding {
+    color:#b71b26;
+}
+.flow-contants .sub-hedding::before,
+.flow-contants .sub-hedding::after {
+    color:#b71b26;
+    content:'';
+    border: 1px solid #b71b26;
+    background-color:#b71b26;
+}
+.flow-contants {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+.flow-list {
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+.flow-list li {
+    writing-mode: vertical-rl;
+    color:#fff;
+    background-color:#333;
+    border-radius: 50px;
+    width:6%;
+    height:42%;
+    font-size:1.75rem;
+    text-align: center;
+    line-height:2;
+}
+.triangle-red {
+    clip-path: polygon(0 0, 0 100%, 100% 50%);
+    background-color: #b71b26;
+    height: 60px;
+    width: 30px;
+}
+
+/* セクション4: inquiry-contants
+　------------------------------------ */
+.q-icon{background-color:#333;}
+.a-icon{background-color:#b71b26;}
+
+.q-icon,
+.a-icon {
+    display:inline-block;
+    width:52px;
+    height:52px;
+    font-size:34px;
+    font-weight: bold;
+    font-family: 'Noto Serif JP';
+    color:#fff;
+    border-radius: 50%;
+    margin-right:6px;
+    text-align:center;
+    line-height:1.5;
+}
+.inquriy-contaner {
+    display:flex;
+    align-items:center;
+    margin-top: 3%;
+    margin-bottom:3%;
+}
+.inquiry-contants p {
+    font-size:1.25rem;
+    line-height:1.5;
+}
+.margin-area {
+    margin-top:9%;
+}
+/* セクション5: contact-contants
+　------------------------------------ */
+.contact-contants {
+    padding-top:9%;
+    padding-bottom:3%;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+.contact-contants .section-container {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+.contact-contants .section-container {
+    margin: 6% 12.5% 3% 12.5%;
+    padding-top: 3%;
+    padding: 5% 3% 6% 3%;
+}
+.required {
+    font-size: 1.185rem;
+    color: #fff;
+    background-color: #B71B26;
+    border-radius: 20%; 
+    display:inline-block;
+    text-align: center; 
+    width: 58px;
+    height:24px;
+    padding-top:3px;
+}
+/* パターンマッチングで部分一致するクラスを纏めて指定。 */
+[class^="form-"] {
+    display:flex;
+    margin-top:3%;
+    margin-bottom:3%;
+    height:auto;
+}
+.form-4{
+    margin-top:0 !important;
+    margin-bottom:0 !important;
+}
+.form-5 .label-form {
+    display:flex;
+}
+.form-5 p {
+    align-self:center;
+} 
+.text-form {
+    flex-basis: 35%;
+    align-self:center;
+    font-size:1.25rem;
+    margin-right:6px;
+    text-align:end;
+}
+.label-form {
+    height:100%;
+    flex-basis:65%;
+    align-self:center;
+}
+
+input[type="text"] {height:100%;}
+input[type="text"]:hover {background:pink;}
+/* [class^="form-"] input[type="text"]:nth-child(n+5) {width: 100%;} */
+.form-6 input[type="text"],
+.form-7 input[type="text"],
+.form-8 input[type="text"],
+.form-9 input[type="text"] {
+    width:100%;
+}
+.form-2 input[type="text"],
+.form-3 input[type="text"],
+.form-4 input[type="text"],
+.form-5 input[type="text"],
+.form-6 input[type="text"],
+.form-7 input[type="text"],
+.form-8 input[type="text"] {
+    height:60px;
+}
+
+.form-9 input[type="text"]{height:200px;}
+
+.confirm-container{
+    text-align:center;
+    margin-top:6%;
+}
+.confirm-btn {
+    display:inline-block;
+    background-color:#333;
+    color:#fff;
+    height:69px;
+    width:300px;
+    text-decoration: none;
+    box-shadow: 0 7px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    font-size:1.5rem;
+    opacity:0.8;
+}
+.confirm-btn:hover{opacity:1;}
+.confirm-btn:active {
+    position: relative;
+    top: 7px;
+    box-shadow: none;
+} 
+/* セクション6: pagetop-area
+　------------------------------------ */
+html{scroll-behavior: smooth;}
+
+.pagetop-area {
+    height: 150px;
+}
+.top-btn {
+    display: block;
+    width: 60px;
+    height: 60px;
+    position:fixed;
+    bottom:24px;
+    right:9px;
+    background-color:#333;
+    opacity:0.5;
+}
+.top-btn:hover{opacity:1;}
+.top-btn::before{
+    content: "";
+    display: block;
+    border-top: 3px solid #fff;
+    border-right: 3px solid #fff;
+    width: 20px;
+    height: 20px;
+    top: 26px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    position: absolute;
+    transform: rotate(-45deg);
+}
+
+/* セクション: footer領域
+　------------------------------------ */
+footer {
+    height:30px;
+    background-color:#333;
+    padding-top:9px;
+}
+footer p {
+    color:#fff;
+    text-align:center;
+    /* 文字を垂直方向中央へ */
+}
+
+
+
+/* ====================================
+   ★メディアクエリの設定
+   ==================================== */
+@media(max-width:768px){
+/*  ★仕様書指定
+   ==================================== */
+   h1 {
+   font-size:1.75rem; 
+   }
+/*  ★共通項目、モジュール設定
+   ==================================== */
+    .section-container {
+        margin: 12% 3%;
+    }
+    .section-container .section-container {
+        padding: 7% 1.5%;
+    }
+    .sub-hedding {
+        font-size:0.75rem;
+    }
+    .flow-contants .sub-hedding::before,
+    .flow-contants .sub-hedding::after {
+    color:#b71b26;
+    content:'';
+    border: 1px solid #333;
+}
+
+/* セクション: header領域
+  ------------------------------------ */
+.logo-img {
+    width:80%;
+}
+/* セクション: nav領域
+  ------------------------------------ */
+.humbager-menu {height:60px;}
+
+#menu_btn{
+    display:none;
+}
+.menu-btn{
+    position:fixed;
+    top:21px;
+    right:6%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+  }
+  .menu-btn span,
+  .menu-btn span:before,
+  .menu-btn span:after {
+      content: '';
+      display: block;
+      height: 3px;
+      width: 30px;
+      border-radius: 3px;
+      background-color: #b71b26;
+      position: absolute;
+  }
+.menu-btn span:before {bottom: 12px;}
+.menu-btn span:after  {top: 12px;}
+
+#menu_btn:checked ~ .menu-btn span {
+    background-color: rgba(255, 255, 255, 0);/*メニューオープン時は真ん中の線を透明にする*/
+}
+#menu_btn:checked ~ .menu-btn span::before {
+    bottom: 0;
+    transform: rotate(45deg);
+    transition: transform 0.5s ease;
+}
+#menu_btn:checked ~ .menu-btn span::after {
+    top: 0;
+    transform: rotate(-45deg);
+    transition: transform 0.5s ease;
+}
+#menu_btn:checked ~ .menu-contents   {
+    transform: translateY(0%); 
+    transition: transform 2.0s ease;
+    background-color: rgba(255, 255, 255, 0.5); 
+    display:block;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    z-index: 100;
+}
+.menu-contents {
+    left:100%;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    /* transform: translateX(0%);  */
+    z-index: 100;
+    background-color: #fff;
+    transition: transform 2.0s ease;
+}
+.menu-contents ul {
+    display:block;
+    text-align:center;
+    margin-top:52%;
+}
+.menu-contents li {
+    margin: 10% auto;
+}
+.menu-contents a {
+    width: 100%;
+    font-size: 1.25rem;
+}
+.menu-contents a:hover {
+    color:#b71b26;
+}
+
+/* セクション: hero画像
+　------------------------------------ */
+.sp-hero {
+    width:100%;
+    height:480px;
+    background-image:url(../images/sp-hero.png);
+    background-size: contain; /* 背景画像を要素に収める */
+    background-repeat: no-repeat;
+    background-position: center;
+}
+/* セクション1: concept-contants
+　------------------------------------ */
+h2 {font-size: 1.25rem}
+.concept-text{font-size: 1rem;}
+/* セクション2: service-contants
+　------------------------------------ */
+.service-list {grid-template-columns: repeat(1, 1fr); }
+.more-btn {padding-top:9%;}
+/* セクション3: flow-contants
+　------------------------------------ */
+.flow-list {display:block;}
+.flow-contants .section-container {
+    padding-top: 6%;
+    padding-bottom: 6%;
+}
+.flow-list li {
+    writing-mode: initial;
+    width:100%;
+    font-size: 1.25rem;
+}
+.triangle-red {
+    margin:6px auto;
+    transform: rotate(90deg);
+    height:40px;
+    width:20px;
+}
+
+/* セクション4: inquiry-contants
+　------------------------------------ */
+.inquiry-contants p {
+    font-size: 1rem;
+    line-height:1.25;
+}
+/* [class^="icon"]  */
+.q-icon,.a-icon {
+    font-size:24px;
+    width:33px;
+    height:33px;
+    padding-right:12px;
+    padding-left:4px;
+}
+.inquriy-contaner-4 {
+    display:flex;
+    margin-top:9%;
+}
+/* セクション5: contact-contants
+　------------------------------------ */
+.contact-contants,
+.contact-contants .section-container{
+    background-color:rgba(0, 0, 0, 0.1);
+}
+.contact-contants .section-container {
+    margin:0;
+}
+[class^="form-"] {
+    display:block;
+}
+form input[type="text"] {
+    width:100%;
+    height:40px !important;
+    margin-top:5px;
+}
+.form-1 {text-align:center;}
+input[type="radio"] {
+    display:inline-block;
+    margin-top:5px;
+}
+.text-form  {
+    font-size:1rem;
+    text-align:center;
+}
+.required {
+    padding-top:5px;
+    font-size: 1rem;
+}
+.confirm-btn {
+    font-size:1rem;
+    width:200px;
+    height:54px;
+}
+
+/* セクション6: pagetop-area
+　------------------------------------ */
+
+/* セクション: footer領域
+　------------------------------------ */
+
+}

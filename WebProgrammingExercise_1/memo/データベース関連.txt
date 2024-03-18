@@ -1,0 +1,9 @@
+・データベース削除
+phpmyadmin
+データーベースの項目をチェック、削除
+
+データベースの作成
+貼り付け、データの追加
+
+・ccdonutsForXampp_adv.sqlをphpmyadminに貼り付けてDBの作成。
+SQLのタブで移動し貼り付けて実行する。

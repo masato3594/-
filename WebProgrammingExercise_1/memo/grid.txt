@@ -1,0 +1,10 @@
+
+.grid-container {
+    display:grid;
+    gap:20px;
+    grid-template-columns: repeat(3,1fr);　//横に並べたい数と同じ比率で表示
+    /* margin-top:; 後で追記
+    margin-bottom:; */
+}
+
+可変幅に対応させる為に後で画像サイズベースで列を調整するのを後日追記予定。。。 

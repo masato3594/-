@@ -1,0 +1,33 @@
+★ドロワーメニューメモ
+
+・CSS
+    #nav {
+        display: none;
+        position: absolute;
+        top: 0;
+        right:0;
+        width: 55%;
+        height: 85vh;
+        background-color: #000;
+        transition: transform 0.3s ease;
+        transform: translateX(100%);
+    }
+    #nav.show {
+        display:block;
+        transform: translateX(0);
+        transition: transform 0.3s;
+    }
+・JS
+// ドロワーメニュー 簡単なイベントを作成
+const drower = document.querySelector('#nav');
+const openBtn = document.querySelector('#DrawerBtn');
+const closeBtn = document.querySelector('#CloseBtn');
+// const outsideDrawer = document.querySelectorAll(':not(#nav)');
+// menuボタンクリックで表示
+openBtn.addEventListener('click',() =>{
+    drower.classList.add('show');
+});
+// 閉じるボタンクリックで非表示
+closeBtn.addEventListener('click',() =>{
+    drower.classList.remove('show');
+});

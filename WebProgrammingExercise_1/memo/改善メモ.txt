@@ -1,0 +1,101 @@
+★メインロゴの水平方向の中央寄せ(最適解)
+親要素にrelative,logo画像にabosolute+left:50%,translateX(-50%)を指定
+これで横幅が可変しても表示位置がずれない。
+
+<div class="box-container">
+    <p>img1</p>
+    <p class="logo-test">img2</p>
+    <p>img3</p>
+    <p>img4</p>
+</div>
+
+.box-container {
+    position:relative;
+    display:flex;
+    justify-content:space-between;
+}
+.box-container p {border: 2px solid #b392ac;}
+.logo-test {
+    position:absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+★CSS　コメントアウトテンプレート
+以下の形を採用する。
+
+
+/*  1. セクションまたはブロックの見出し
+   ==================================== */
+
+/* セクション1: ヘッダースタイル
+   ------------------------------------ */
+
+
+/* ====================================
+   2. プロパティの説明とコメント
+   ==================================== */
+
+
+/* ====================================
+   3. ブラウザ互換性のコメント
+   ==================================== */
+
+/* ====================================
+   4. 一時的なコードまたは修正予定
+   ==================================== */
+
+/* ====================================
+   5. コードの削除予定コメント
+   ==================================== */
+
+/* このスタイルは次のバージョンで削除予定 */
+
+★共通パーツのモジュール化
+
+/* 共通のボタンスタイル */
+[class^="btn"] {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+/* ホバーエフェクト */
+[class^="btn"]:hover {
+  background-color: #ddd;
+}
+
+/* アクティブ（クリック時）エフェクト */
+[class^="btn"]:active {
+  background-color: #bfbfbf;
+}
+
+/* 見出しのモジュール化 */
+
+[class^="heading"] 
+
+/* コンテンツ幅の共通marginの取り方 */
+・セクション直下に空のdiv
+<section class="xxxx-contants">
+  <div class="margin-container">
+    <!-- セクション内のコンテンツ -->
+  </div>
+</section>
+
+・セクション名にクラス名を二つ設定⇒こっちを採用
+<section class="xxxx-contants section-margin">
+
+ブレイクポイント三つに設定する場合
+
+起点が1366px(pc)で考えて、。
+4k(～1900px)
+タブレット(768-960px)
+sp(375-428px)
+と想定した場合ブレイクポイントはどう設定するのが理想

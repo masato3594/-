@@ -1,0 +1,404 @@
+/* ★仕様書指定項目
+==================================== */
+body {
+width:1366px;
+max-width:100%;
+font-family: "Noto Sans JP", sans-serif;
+}
+h1 {
+    font-size:2.625rem;
+    letter-spacing: 6px;
+    font-weight: bold;
+    text-align:center;
+    font-family: "sans-serif jp";
+    margin-bottom:24px;
+}
+.sub-hedding {
+    font-size:1rem;
+    font-family: "Noto Sans JP";
+}
+/* ★仕様書指定
+カラー指定
+#b71b26(赤)
+#223e69(青)
+#fff(白)
+#333(黒) */
+
+/* ★リンクのマウスホバーの設定の挿入(:hover)
+★フォームエリアのフォーカス時の設定の挿入(:hover) */
+/* ★ファビコン探す */
+
+/* ★仮の画像置き場 */
+.image-pc{display:block;}
+.image-sp{display:none;}
+
+/*  ★共通項目、モジュール設定
+   ==================================== */
+*{box-sizing: border-box;}
+/* コンテンツマージン */
+.section-container {
+    margin: 15% 12.5%;
+}
+.section-container .section-container {
+    padding: 11% 12.5%;
+}
+/* 見出しとサブタイトルの調整の仕掛け */
+.hedding-area {
+    margin-bottom:48px;
+}
+.sub-hedding {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+/* サブタイトルに罫線を引く仕掛け */
+.sub-hedding::before,
+.sub-hedding::after {
+    display:inline-block;
+    content: '';
+    width: 80px;
+    height: 2px;
+    background-color: #333;
+    margin: 0 12px;
+}
+img {display:block;}
+/* セクション: header領域
+   ------------------------------------ */
+.logo-img {
+    width:80%;
+    height:60px;
+    margin-top: 6px;
+    margin-left: 33px;
+}
+header {
+    display:flex;
+    justify-content:space-between;
+}
+/* セクション: nav領域
+  ------------------------------------ */
+#menu_btn {display:none;}
+
+nav {
+    width:100%;
+}
+.menu-contents ul {
+    display:flex;
+    justify-content:space-evenly;
+    margin-top:27px;
+    margin-bottom:21px;
+}
+.menu-contents a {
+    text-decoration: none;
+    font-size:1rem;
+    color:#333;
+}
+/* セクション: hero画像
+　------------------------------------ */
+.pc-hero {
+    width:100%;
+    height:545px;
+    /* 後でbackground一括指定 */
+    background-image:url(../images/pc-hero.png);
+    object-fit:cover;
+    background-repeat: no-repeat;
+}
+
+/* セクション1: concept-contants
+　------------------------------------ */
+h2 {
+    font-size:1.75rem;
+    font-weight: bold;
+    text-align:center;
+}
+.concept-text {
+    margin-top:24px;
+}
+/* セクション2: service-contants
+　------------------------------------ */
+.service-list {
+    display:grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap:60px;
+}
+.grid-list img {
+    width:100%;
+    height:auto;
+    object-fit:cover;
+}
+h3 {
+    font-size:1.5rem;
+    font-family: "Noto Sans JP";
+    margin: 16px auto;
+    text-align:center;
+}
+.more-btn {
+    display:inline-block;
+    text-decoration: none;
+    color:#333;
+    padding-top:15%;
+    margin-left:83%;
+}
+.triangle-mini {
+    display:inline-block;
+    clip-path: polygon(0 0, 0 100%, 100% 50%);
+    background-color: #333;
+    height: 8px;
+    width: 8px;
+    margin-left:3px;
+}
+
+/* セクション3: flow-contants
+　------------------------------------ */
+.flow-contants .section-container {
+    padding-top: 9%;
+    padding-bottom: 9%;
+}
+.flow-contants .sub-hedding {
+    color:#b71b26;
+}
+.flow-contants .sub-hedding::before,
+.flow-contants .sub-hedding::after {
+    color:#b71b26;
+    content:'';
+    border: 1px solid #b71b26;
+    background-color:#b71b26;
+}
+.flow-contants {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+.flow-list {
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+.flow-list li {
+    writing-mode: vertical-rl;
+    color:#fff;
+    background-color:#333;
+    border-radius: 50px;
+    width:6%;
+    height:42%;
+    font-size:1.75rem;
+    text-align: center;
+    line-height:2;
+}
+.triangle-red {
+    clip-path: polygon(0 0, 0 100%, 100% 50%);
+    background-color: #b71b26;
+    height: 60px;
+    width: 30px;
+}
+
+/* セクション4: inquiry-contants
+　------------------------------------ */
+.q-icon{background-color:#333;}
+.a-icon{background-color:#b71b26;}
+
+.q-icon,
+.a-icon {
+    display:inline-block;
+    width:52px;
+    height:52px;
+    font-size:34px;
+    font-weight: bold;
+    font-family: 'Noto Serif JP';
+    color:#fff;
+    border-radius: 50%;
+    margin-right:6px;
+    text-align:center;
+    line-height:1.5;
+}
+.inquriy-contaner {
+    display:flex;
+    align-items:center;
+    margin-top: 3%;
+    margin-bottom:3%;
+}
+.inquiry-contants p {
+    font-size:1.25rem;
+    line-height:1.5;
+}
+.margin-area {
+    margin-top:9%;
+}
+/* セクション5: contact-contants
+　------------------------------------ */
+
+/* セクション6: pagetop-area
+　------------------------------------ */
+
+/* セクション: footer領域
+　------------------------------------ */
+
+
+
+
+
+/* ====================================
+   ★メディアクエリの設定
+   ==================================== */
+@media(max-width:768px){
+    /* 仮の画像 */
+    .image-pc{display:none;}
+    .image-sp{display:block;}
+/*  ★仕様書指定
+   ==================================== */
+   h1 {
+   font-size:1.75rem; 
+   }
+/*  ★共通項目、モジュール設定
+   ==================================== */
+    .section-container {
+        margin: 6% 3%;
+    }
+    .section-container .section-container {
+        padding: 7% 1.5%;
+    }
+    .sub-hedding {
+        font-size:0.75rem;
+    }
+    .flow-contants .sub-hedding::before,
+    .flow-contants .sub-hedding::after {
+    color:#b71b26;
+    content:'';
+    border: 1px solid #333;
+}
+
+/* セクション: header領域
+  ------------------------------------ */
+.logo-img {
+    width:80%;
+}
+/* セクション: nav領域
+  ------------------------------------ */
+.humbager-menu {height:60px;}
+
+#menu_btn{
+    display:none;
+}
+.menu-btn{
+    position:fixed;
+    top:21px;
+    right:6%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+  }
+  .menu-btn span,
+  .menu-btn span:before,
+  .menu-btn span:after {
+      content: '';
+      display: block;
+      height: 3px;
+      width: 30px;
+      border-radius: 3px;
+      background-color: #b71b26;
+      position: absolute;
+  }
+.menu-btn span:before {bottom: 12px;}
+.menu-btn span:after  {top: 12px;}
+
+#menu_btn:checked ~ .menu-btn span {
+    background-color: rgba(255, 255, 255, 0);/*メニューオープン時は真ん中の線を透明にする*/
+}
+#menu_btn:checked ~ .menu-btn span::before {
+    bottom: 0;
+    transform: rotate(45deg);
+    transition: transform 0.5s ease;
+}
+#menu_btn:checked ~ .menu-btn span::after {
+    top: 0;
+    transform: rotate(-45deg);
+    transition: transform 0.5s ease;
+}
+
+#menu_btn:checked ~ .menu-contents   {
+    transform: translateY(0%); 
+    transition: transform 2.0s ease;
+    background-color: rgba(255, 255, 255, 0.5); 
+    display:block;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    z-index: 100;
+}
+.menu-contents {
+    left:100%;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    /* transform: translateX(0%);  */
+    z-index: 100;
+    background-color: #fff;
+    transition: transform 2.0s ease;
+}
+.menu-contents ul {
+    display:block;
+    text-align:center;
+    margin-top:24%;
+}
+.menu-contents li {
+    margin: 10% auto;
+}
+.menu-contents a {
+    width: 100%;
+    font-size: 1.25rem;
+}
+.menu-contents a:hover {
+    color:#b71b26;
+}
+
+/* セクション: hero画像
+　------------------------------------ */
+.sp-hero {
+    width:100%;
+    height:480px;
+    background-image:url(../images/sp-hero.png);
+    object-fit:cover;
+    background-repeat: no-repeat;
+}
+/* セクション1: concept-contants
+　------------------------------------ */
+h2 {font-size:1.25rem}
+/* セクション2: service-contants
+　------------------------------------ */
+.service-list {
+    grid-template-columns: repeat(1, 1fr); 
+}
+.more-btn {
+    padding-top:9%;
+}
+/* セクション3: flow-contants
+　------------------------------------ */
+.flow-list {display:block;}
+
+.flow-contants .section-container {
+    padding-top: 6%;
+    padding-bottom: 6%;
+}
+.flow-list li {
+    writing-mode: initial;
+    width:100%;
+}
+.triangle-red {
+    margin:6px auto;
+    transform: rotate(90deg);
+}
+
+/* セクション4: inquiry-contants
+　------------------------------------ */
+
+/* セクション5: contact-contants
+　------------------------------------ */
+
+/* セクション6: pagetop-area
+　------------------------------------ */
+
+/* セクション: footer領域
+　------------------------------------ */
+}
